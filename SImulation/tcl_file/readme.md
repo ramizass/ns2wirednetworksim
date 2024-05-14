@@ -80,13 +80,13 @@ Tcl Steps
 
 10. Place the FTP packet over the TCP path.
 
-   #Attach FTP source to the TCP flow
+      #Attach FTP source to the TCP flow
    set ftp [new Application/FTP]
    $ftp attach-agent $tcp
 
 11. Create an event scheduler, where at t=0.5 the ftp packet is activated and stopped at t=4.5. Meanwhile at t=2 the CBR packet is activated and stopped at t=5.
 
-   #Schedule Events
+      #Schedule Events
    $ns at 0.5 "$ftp start"
    $ns at 2.0 "$cbr start"
    $ns at 4.5 "$ftp stop"
@@ -94,15 +94,15 @@ Tcl Steps
 
 12. Output to the CLI editor the size of the packets and the interval between packets
 
-   #Put the information to the CLI editor
+      #Put the information to the CLI editor
    puts [$cbr set packetSize_]
    puts [$cbr set interval_]
 
 13. End the simulation process
 
-   $ns at 6.0 "finish"
+      $ns at 6.0 "finish"
    $ns run
 
 14. After all the syntax is written, save it. In the directory where simulation.tcl is located, compile the file by typing:
 
-   $ ns fileku.tcl
+      $ ns fileku.tcl
