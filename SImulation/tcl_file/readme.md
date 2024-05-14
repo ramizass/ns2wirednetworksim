@@ -28,7 +28,7 @@ proc finish {} {
 }
 
 5. Generate the nodes
-# reate nodes
+#Create nodes
 set n0 [$ns node]
 set n1 [$ns node]
 set n2 [$ns node]
