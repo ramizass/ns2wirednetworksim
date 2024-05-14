@@ -1,3 +1,4 @@
+# Introduction
 This is a simple simulation to simulate a wired network using NS-2. NS-2 is built from 2 programming languages: libraries with the C++ programming language used for event schedulers, protocols and network components, and Tcl/OTcl which is a programming language for writing simulation scripts. The relationship between simulation input, execution process and simulation output with the two programming languages mentioned above is shown in the body of NS-2
 
 ![image](https://github.com/ramizass/ns2wirednetworksim/assets/88464165/aa01af61-05c8-4793-ba9d-e47f350a55e6)
@@ -16,7 +17,7 @@ This is a simple simulation to simulate a wired network using NS-2. NS-2 is buil
 5. Manage the course of simulation scenarios, traffic flow, traces and other events.
 6. Process the trace file data into data that is ready to be plotted and to facilitate analysis
 
-**Simulation Scenario**
+# Simulation Scenario
 
 ![image](https://github.com/ramizass/ns2wirednetworksim/assets/88464165/ba572aaa-6b82-4e38-b3d3-dbf3a9a16187)
 
