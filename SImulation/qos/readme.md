@@ -18,3 +18,12 @@ Apply the file to the outc.txt file with the command below and save it in File1.
 
 $ awk -f throughput.awk outc.txt>>File1
 
+# How to plot the data usign Xgraph
+To plot it into a graph, the parsed file is processed using the Xgraph command.
+Make sure the Xgraph package has been installed on your Ubuntu. The command is as follows:
+
+$ xgraph file_name
+
+for example from before:
+
+$ xgraph File1
