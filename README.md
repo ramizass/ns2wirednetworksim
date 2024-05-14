@@ -17,7 +17,9 @@ This is a simple simulation to simulate a wired network using NS-2. NS-2 is buil
 6. Process the trace file data into data that is ready to be plotted and to facilitate analysis
 
 **Simulation Scenario**
+
 ![image](https://github.com/ramizass/ns2wirednetworksim/assets/88464165/ba572aaa-6b82-4e38-b3d3-dbf3a9a16187)
+
 1. A wired network consists of 4 nodes (n0, n1, n2 and n3).
 2. The path between n0 and n2 is duplex with a bandwidth of 100 Mbps, a delay of 5 ms and a DropTail type queue.
 3. The same applies to the path from n1 to n2.
