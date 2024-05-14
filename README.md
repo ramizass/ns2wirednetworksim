@@ -1,37 +1,31 @@
-Ini merupakan sebuah simulasi sederhana untuk membuat simulasi jaringan wired menggunakan NS-2
-NS-2 dibangun dari 2 bahasa pemrograman: library-library dengan Bahasa pemrograman C++ yang digunakan untuk event scheduler, protocol dan network components, dan Tcl/OTcl yang merupakan Bahasa pemrograman untuk menulis script simulasi. Hubungan antara input simulasi, proses eksekusi dan output simulasi dengan kedua Bahasa pemrograman tersebut di atas ditunjukkan sebagai batang tubuh NS-2
+This is a simple simulation to simulate a wired network using NS-2. NS-2 is built from 2 programming languages: libraries with the C++ programming language used for event schedulers, protocols and network components, and Tcl/OTcl which is a programming language for writing simulation scripts. The relationship between simulation input, execution process and simulation output with the two programming languages mentioned above is shown in the body of NS-2
 
 ![image](https://github.com/ramizass/ns2wirednetworksim/assets/88464165/aa01af61-05c8-4793-ba9d-e47f350a55e6)
 
-**Komponen-komponen NS-2**
-1. NS sebagai simulator
-2. NAM, sebagai network animator bertugas untuk mem-visualisasikan output dari NS-2.
-Editor NAM berupa interface GUI yang dipanggil sebagai file ber-ekstensi .nam pada
-script Tcl.
-3. Pre-processing, bertugas membangkitkan trafik dan topologi jaringan
-4. Post-processing, berupa analisa hasil simulasi yang ditampilkan pada file .tr dimana
-sebagian dari hasl simulasi tersebut dapat di-filter menggunakan perintah awk dan dapat
-dikonversikan dalam bentuk grafik dengan tool XGraph. Penjelasan untuk pem-filter an
-data simulasi ini secara detail ada di bagian akhir petunjuk praktikum.
+**NS-2 components**
+1. NS as a simulator
+2. NAM, as a network animator, is tasked with visualizing the output of NS-2. The NAM editor is a GUI interface which is called as a file with the extension .nam in the Tcl scripts.
+3. Pre-processing, responsible for generating traffic and network topology
+4. Post-processing, in the form of analysis of simulation results displayed in the .tr file where some of the simulation results can be filtered using the awk command and can be converted into graphic form with the XGraph tool. A detailed explanation for filtering simulation data is at the end of the practical instructions.
 
-**Langkah-langkah dalam Membangun Simulasi dengan NS-2**
-1. Buat simulator object dan event scheduler menggunakan tcl programming
-2. Buat topologi jaringan
-3. Definisikan pola trafik
-4. Definisikan trace file
-5. Atur jalannya scenario simulasi, traffic flow, trace dan event-event lainnya.
-6. Olah data hasil trace file menjadi data yang siap di-plot dan untuk memudahkan analisa
+**Steps in Building a Simulation with NS-2**
+1. Create a simulator object and event scheduler using TCL programming
+2. Create a network topology
+3. Define traffic patterns
+4. Define the trace file
+5. Manage the course of simulation scenarios, traffic flow, traces and other events.
+6. Process the trace file data into data that is ready to be plotted and to facilitate analysis
 
-**Skenario Simulasi**
-Skenario simulasi yang akan dibangun dengan penjelasan sebagai berikut:
-1. Sebuah jaringan wired terdiri dari 4 node (n0, n1, n2 dan n3).
-2. Jalur antara n0 dan n2 adalah duplex dengan bandwidth 100 Mbps, delay 5 ms dan queue tipe DropTail.
-3. Hal yang sama berlaku untuk jalur dari n1 ke n2.
-4. Di antara n2 dan n4 dibangun jalur duplex dengan bandwidth 54 Mbps delay 10 ms dan DropTail queue, begitu pula dari n2 dan n3.
-5. Sementara itu di antara n3 dan n4 ada jalur simplex dengan bandwidth 10 Mbps dan delay 15 ms.
-6. Akan dialirkan paket aplikasi CBR dari node n0 ke n3 yang melalui protokol UDP dengan node n3 adalah Null agent.
-7. Sementara paket FTP dialirkan dari node n1 ke n4 melalui protocol TCP, dengan node n4 adalah TCPSink.
-8. Simulasi dijalankan selama 6 detik. Pada detik ke 0,5 paket ftp mulai dikirimkan dan berakhir pada detik ke 4,5.
-9. Pada detik ke 2 paket cbr dikirimkan dan berakhir pada detik ke 5.
-
+**Simulation Scenario**
 ![image](https://github.com/ramizass/ns2wirednetworksim/assets/88464165/ba572aaa-6b82-4e38-b3d3-dbf3a9a16187)
+1. A wired network consists of 4 nodes (n0, n1, n2 and n3).
+2. The path between n0 and n2 is duplex with a bandwidth of 100 Mbps, a delay of 5 ms and a DropTail type queue.
+3. The same applies to the path from n1 to n2.
+4. Between n2 and n4, a duplex line is built with a bandwidth of 54 Mbps, a delay of 10 ms and a DropTail queue, as well as from n2 and n3.
+5. Meanwhile between n3 and n4 there is a simplex line with a bandwidth of 10 Mbps and a delay of 15 ms.
+6. The CBR application package will be streamed from node n0 to n3 via UDP protocol with node n3 being the Null agent.
+7. Meanwhile, FTP packets are streamed from node n1 to n4 via the TCP protocol, with node n4 being TCPSink.
+8. The simulation runs for 6 seconds. At 0.5 seconds the ftp packet starts sending and ends at 4.5 seconds.
+9. In the 2nd second the CBR packet is sent and ends in the 5th second.
+
+
