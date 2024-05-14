@@ -29,5 +29,3 @@ This is a simple simulation to simulate a wired network using NS-2. NS-2 is buil
 7. Meanwhile, FTP packets are streamed from node n1 to n4 via the TCP protocol, with node n4 being TCPSink.
 8. The simulation runs for 6 seconds. At 0.5 seconds the ftp packet starts sending and ends at 4.5 seconds.
 9. In the 2nd second the CBR packet is sent and ends in the 5th second.
-
-
