@@ -1,14 +1,14 @@
 Tcl Steps
 1. Open a new tcl file with the gedit command. For example, the file name is simulation.tcl
 
-#gedit simulation.tcl
+   #gedit simulation.tcl
 
 2. On the top line of the file, define the simulator name. In this exercise the name is ns
 
-#Create a Simulator
-set ns [new Simulator]
+   #Create a Simulator
+   set ns [new Simulator]
 
-3. Create variable trace objects, namely traceku which will be used as an output .tr file with the name out1.tr, and NAMku which will be used as an output .nam file with the name out1.nam. The names of the object variables and output files are up to you.
+4. Create variable trace objects, namely traceku which will be used as an output .tr file with the name out1.tr, and NAMku which will be used as an output .nam file with the name out1.nam. The names of the object variables and output files are up to you.
    
 #Create trace object
 set traceku [open out1.tr w]
